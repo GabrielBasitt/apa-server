@@ -5,6 +5,12 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
+        name:{
+            type: Sequelize.STRING,
+            notNull: true,
+            is:/^[a-zA-Z0-9\._]{4, 32}$/,
+            unique:true
+        },
         username: {
             type: Sequelize.STRING,
             notNull: true,
