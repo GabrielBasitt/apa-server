@@ -5,4 +5,4 @@ Camadas
 • Controllers: Controla as regras de negócio
 com as rotas;
 • Service: Cria as regras de negócio da
-aplicação, como selecionar todos os usuários.
+aplicação, como selecionar todos os usuários.c

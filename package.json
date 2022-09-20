@@ -1,7 +1,7 @@
 {
   "name": "apa-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Camadas\r • Model: representa das tabelas do banco;\r • Routes: cria as rotas de navegação;\r • Controllers: Controla as regras de negócio\r com as rotas;\r • Service: Cria as regras de negócio da\r aplicação, como selecionar todos os usuários.c",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,6 @@
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.23.0"
-  }
+  },
+  "devDependencies": {}
 }
