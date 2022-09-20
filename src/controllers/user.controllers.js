@@ -1,3 +1,5 @@
+//const { request } = require('express')
+//const { users } = require('../models')
 const userService = require('../services/user.service')
 
 exports.findAll = async (request, response) =>{

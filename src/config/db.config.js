@@ -12,4 +12,4 @@ module.exports = {
     }
 }
 
-//password mudar para a senha do seu postgres e depois a do keroku
+//password mudar para a senha do seu postgres e depois mudar no heroku
