@@ -2,7 +2,7 @@ module.exports = {
     HOST: "localhost",
     USER: "postgres",
     PASSWORD: "senai",
-    DB: "users_db",
+    DB: "apa_server_localhost",
     DIALECT : "postgres",
     pool: {
         max: 5,
