@@ -1,19 +1,19 @@
-create table pessoa (
-  idpessoa serial primary key,
-  nome_completo varchar(150),
-  nome_usuario varchar(150),
+create table users (
+  idusers serial primary key,
+  name varchar(150),
+  username varchar(150),
   email varchar(100),
-  senha varchar(50),
+  password varchar(50),
   foto varchar(200)  
 );
-create table postagem (
- idpostagem serial primary key,
+create table post (
+ idpost serial primary key,
  foto varchar(200),
  data_postagem date,
  titulo varchar(100),
  descricao varchar(300),
  localizacao varchar(300),
  comentario varchar(200),
- idpessoa int,
- foreign key(idpessoa) references pessoa(idpessoa)
+ idusers int,
+ foreign key(idusers) references user(idusers)
 )
