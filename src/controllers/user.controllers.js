@@ -88,17 +88,24 @@ exports.delete = async(request, response) => {
             })
     }
 }
-exports.findAll = async(request, response) => {
+exports.login = async(request, response) => {
 try{
-    const users = parseInt(request.params.email) + parseInt(request.params.password)
-    response.status(200).json({
-        status: 200,
-        data: users,
-        message: 'login efeutuado com sucesso'
-    })
+   
+    const {email, password } = request.body
+    const users = await userService.login(email, password)
+    if(users == null){
+        response.status(400).send("Usuário não encontrado");
+    }else{
+        response.status(200).json({
+            message: "Login efetuado!",
+            status: 200,
+            data: users
+        })
+    }
+    console.log(users);
 } catch (e){
-    return response.sed(400).json({
-        status:400,
+    return response.status(400).send({
+        status: 400,
         message: "Erro ao efetuar o login. Error: " + e.message
 
     })
