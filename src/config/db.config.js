@@ -1,5 +1,5 @@
 module.exports = {
-    HOST: "localhost",
+    HOST: "DATABASE_URL",
     USER: "postgres",
     PASSWORD: "mercado123",
     DB: "apa_server_localhost",
