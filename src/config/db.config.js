@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "DATABASE_URL",
-    USER: "postgres",
-    PASSWORD: "mercado123",
-    DB: "apa_server_localhost",
+    HOST: process.env.HOST,
+    USER: process.env.USER,
+    PASSWORD: process.env.PASSWORD,
+    DB: process.env.DB,
     DIALECT : "postgres",
     pool: {
         max: 5,
