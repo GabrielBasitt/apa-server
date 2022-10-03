@@ -14,3 +14,8 @@ git config --global user.email "gabriel_basit@estudante.sesisenai.org.br"
 npm init -y
 • Instalando pacotes:
 npm install pg pg-hstore cors dotenv express express-promise-router sequelize
+
+npm install -g heroku
+heroku login
+heroku logs --app apa-serverr --tail
+https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli

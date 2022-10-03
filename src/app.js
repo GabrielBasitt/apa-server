@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const Pool = require('pg').Pool
 const app = express()
 require("dotenv").config()
 
