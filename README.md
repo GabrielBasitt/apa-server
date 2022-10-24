@@ -19,5 +19,5 @@ npm install -g heroku
 DATABASE_URL=postgres://
 heroku login
 heroku logs --app apa-serverr --tail
-heroku config:get DATABASE_URL
 https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli
+https://sequelize.org/docs/v6/getting-started/
