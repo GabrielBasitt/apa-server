@@ -1,8 +1,9 @@
+require("dotenv").config()
 const express = require('express')
 const cors = require('cors')
 const Pool = require('pg').Pool
 const app = express()
-require("dotenv").config()
+
 
 const index = require('./routers/index')
 const userRouters = require('./routers/user.routers')
@@ -17,15 +18,13 @@ app.use('/api/', userRouters)
 
 module.exports = app
 
- //require("dotenv").config()
+  //const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
+//  const proConfig = process.env.DATABASE_URL;
 
- const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
- const proConfig = process.env.DATABASE_URL;
-
-  const db = new Pool({
-  ssl:{
-    rejectUnauthorized: false
- },
-   connectionString:
-    process.env.NODE_ENV === "production" ? proConfig : devConfig
-    })
+//   const db = new Pool({
+//   ssl:{
+//     rejectUnauthorized: false
+//  },
+//    connectionString:
+//     process.env.NODE_ENV === "production" ? proConfig : devConfig
+//     })

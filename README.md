@@ -16,6 +16,8 @@ npm init -y
 npm install pg pg-hstore cors dotenv express express-promise-router sequelize
 
 npm install -g heroku
+DATABASE_URL=postgres://
 heroku login
 heroku logs --app apa-serverr --tail
+heroku config:get DATABASE_URL
 https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli
