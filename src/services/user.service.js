@@ -64,6 +64,3 @@ exports.login = async (email, password) => {
     
 
 }
-//exports.findbyemailandsenha = async (email, senha){
-// where:{email: email, senha: senha}    
-//}

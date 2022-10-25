@@ -14,6 +14,8 @@ const sequelize = new Sequelize(
     }
 
 )
+//const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname') // Example for postgres
+
 
 const db = {}
 db.Sequelize = Sequelize
