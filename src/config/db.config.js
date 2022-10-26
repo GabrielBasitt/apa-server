@@ -1,10 +1,10 @@
 module.exports = {
-    HOST: process.env.PG_HOST,
-    USER: process.env.PG_USER,
-    PASSWORD: process.env.PG_PASSWORD,
-    DB: process.env.PG_DATABASE,
+    HOST: "localhost",
+    USER: "postgres",
+    PASSWORD: "senai",
+    DB: "apa_server_localhost",
     DIALECT : "postgres",
-    pool: {
+    pool:{
         max: 5,
         min: 0,
         acquire: 30000,

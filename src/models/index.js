@@ -14,7 +14,6 @@ const sequelize = new Sequelize(
     }
 
 )
-//const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname') // Example for postgres
 
 
 const db = {}
@@ -26,3 +25,4 @@ module.exports = db
 
 //chave estrangeira
 //https://sequelize.org/docs/v6/core-concepts/assocs/
+
