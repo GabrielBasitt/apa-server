@@ -22,4 +22,4 @@ heroku logs --app apa-serverr --tail
 https://devcenter.heroku.com/articles/heroku-cli#install-the-heroku-cli
 https://sequelize.org/docs/v6/getting-started/
 
- token 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
+ token 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
