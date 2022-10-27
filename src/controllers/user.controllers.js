@@ -102,7 +102,6 @@ try{
             data: users
         })
     }
-    console.log(users);
 } catch (e){
     return response.status(400).send({
         status: 400,
@@ -111,30 +110,3 @@ try{
     })
 }
 }
-// const getPessoa = (request, response) => {
-//   const { email, senha } = request.body
-//   db.query(
-//     'SELECT * FROM pessoa WHERE email = $1 ORDER BY nome_completo',
-//     [email],
-//         (error, results) => {
-//           if (error) {
-//             console.log("error" + error);
-//             response.status(400).send({
-//               status: 400,
-//               message: "error ao procurar o usuário" + error,
-//             });
-//             } else {
-//             if(results.rows.length === 0) {
-//               response.status(400).send("Usuário não encontrado");
-//               } else {
-//               if (results.rows[0].senha === senha) {
-//                 response.status(200).json(results.rows);
-//                 console.log(request.body);
-//                 } else {
-//                 response.status(400).send('Senha incorreta')
-//                 }
-//               }
-//             }
-//           }
-//         )
-//       };
