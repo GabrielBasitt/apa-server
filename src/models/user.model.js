@@ -19,7 +19,8 @@ module.exports = (sequelize, Sequelize) => {
         email:{
             type: Sequelize.STRING,
             notNull: true,
-            isEmail: true,
+            is:/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+
             unique:true
         },
         password: {

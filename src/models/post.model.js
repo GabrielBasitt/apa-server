@@ -11,8 +11,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         data_Postagem:{
             type: Sequelize.STRING,
-            notNull: true,
-            isDate: true
+            notNull: true
         },
         descricao:{
             type: Sequelize.STRING,
@@ -21,7 +20,6 @@ module.exports = (sequelize, Sequelize) => {
         localizacao: {
             type: Sequelize.STRING,
             notNull:true,
-
         },
         comentario: {
             type: Sequelize.STRING,
