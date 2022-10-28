@@ -54,7 +54,6 @@ exports.update = async(request, response) =>{
     try{
         const id = parseInt(request.params.id)
         const {username, name, email, password} = request.body
-
         await userService.update(id, username, name, email, password)
         response.status(200).send({
             message: "usuario alterado com sucesso",

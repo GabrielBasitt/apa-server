@@ -19,8 +19,11 @@ const sequelize = new Sequelize(
 const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
+db.posts = require('../models/post.model.js')(db.sequelize, db.Sequelize)
 db.users = require('../models/user.model.js')(db.sequelize, db.Sequelize)
+
 db.users.sync()
+db.posts.sync()
 module.exports = db
 
 //chave estrangeira

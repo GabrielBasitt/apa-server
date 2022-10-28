@@ -1,30 +1,32 @@
 module.exports = (sequelize, Sequelize) => {
-    const User = sequelize.define('users',  {
+    const Post = sequelize.define('posts',  {
         id:{
             type: Sequelize.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name:{
+        foto:{
             type: Sequelize.STRING,
             notNull: true,
+        },
+        data_Postagem:{
+            type: Sequelize.STRING,
+            notNull: true,
+            isDate: true
+        },
+        descricao:{
+            type: Sequelize.STRING,
             is:/^[a-zA-Z0-9\._]{4, 32}$/
         },
-        username: {
+        localizacao: {
             type: Sequelize.STRING,
-            notNull: true,
-            is:/^[a-zA-Z0-9\._]{4, 32}$/,
-            unique:true
+            notNull:true,
+
         },
-        email:{
+        comentario: {
             type: Sequelize.STRING,
-            notNull: true,
-            isEmail: true,
-            unique:true
-        },
-        password: {
-            type: Sequelize.STRING,
-            notNull:true
+            notNull:true,
+            is:/^[a-zA-Z0-9\._]{4, 32}$/
         }
     },
     {
@@ -32,5 +34,5 @@ module.exports = (sequelize, Sequelize) => {
     }   
 
 )
-    return User
+    return Post
 }
