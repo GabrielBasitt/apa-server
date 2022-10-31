@@ -8,7 +8,7 @@ create table users (
 );
 create table post (
  idpost serial primary key,
- foto varchar(200),
+ imgURL varchar(200),
  descricao varchar(300),
  comentario varchar(200),
  idusers int,

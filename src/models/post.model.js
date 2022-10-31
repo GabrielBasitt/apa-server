@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
             primaryKey: true,
             autoIncrement: true
         },
-        foto:{
+        imgURL:{
             type: Sequelize.STRING,
             notNull: true,
         },

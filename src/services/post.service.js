@@ -4,7 +4,7 @@ const Post = db.posts
 exports.findAll = async () => {
  try{
     const posts = await Post.findAll({
-        attributes:['id','foto', 'descricao', 'comentario']
+        attributes:['id','imgURL', 'descricao', 'comentario']
     })
     return posts
  } catch (e) {
@@ -15,17 +15,17 @@ exports.findAll = async () => {
 exports.findById = async(id) => {
     try{
         const post = await Post.findByPk(id, {
-            attributes:['id','foto', 'descricao', 'comentario' ]
+            attributes:['id','imgURL', 'descricao', 'comentario' ]
         })
         return post
     } catch (e){
         throw Error('Ocorreu um erro ao selecionar o Post. ERROR: ' + e.message)
     }
 }
-exports.create = async(foto, descricao, comentario) => {
+exports.create = async(imgURL, descricao, comentario) => {
     try{
         const post = await Post.create({
-            foto: foto, descricao: descricao, comentario: comentario})
+            foto: imgURL, descricao: descricao, comentario: comentario})
         return post
     }catch (e){
         throw Error('Erro ao criar post:  ' + username + ' ERROR:  ' + e.message)
