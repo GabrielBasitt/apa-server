@@ -9,17 +9,9 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             notNull: true,
         },
-        data_Postagem:{
-            type: Sequelize.STRING,
-            notNull: true
-        },
         descricao:{
             type: Sequelize.STRING,
             is:/^[a-zA-Z0-9\._]{4, 32}$/
-        },
-        localizacao: {
-            type: Sequelize.STRING,
-            notNull:true,
         },
         comentario: {
             type: Sequelize.STRING,

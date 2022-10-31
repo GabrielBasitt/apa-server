@@ -9,10 +9,7 @@ create table users (
 create table post (
  idpost serial primary key,
  foto varchar(200),
- data_postagem date,
- titulo varchar(100),
  descricao varchar(300),
- localizacao varchar(300),
  comentario varchar(200),
  idusers int,
  foreign key(idusers) references user(idusers)
