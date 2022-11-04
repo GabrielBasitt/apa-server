@@ -9,6 +9,7 @@ exports.findAll = async () => {
     return posts
  } catch (e) {
     throw Error('Ocorreu um erro ao selecionar os usuários. ERROR: ' + e.message)
+    console.log(e);
  }
 }
 
@@ -25,10 +26,10 @@ exports.findById = async(id) => {
 exports.create = async(imgURL, descricao, comentario) => {
     try{
         const post = await Post.create({
-            foto: imgURL, descricao: descricao, comentario: comentario})
+            imgURL: imgURL, descricao: descricao, comentario: comentario})
         return post
     }catch (e){
-        throw Error('Erro ao criar post:  ' + username + ' ERROR:  ' + e.message)
+        throw Error('Erro ao criar post:  ' + ' ERROR:  ' + e.message)
     }
 }
 exports.delete = async (id) => {

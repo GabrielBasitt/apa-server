@@ -6,17 +6,13 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true
         },
         imgURL:{
-            type: Sequelize.STRING,
-            notNull: true,
+            type: Sequelize.STRING
         },
         descricao:{
-            type: Sequelize.STRING,
-            is:/^[a-zA-Z0-9\._]{4, 32}$/
+            type: Sequelize.STRING
         },
         comentario: {
-            type: Sequelize.STRING,
-            notNull:true,
-            is:/^[a-zA-Z0-9\._]{4, 32}$/
+            type: Sequelize.STRING
         }
     },
     {
