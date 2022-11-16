@@ -5,7 +5,6 @@ const postService = require('../services/post.service')
 exports.findAll = async (request, response) =>{
     try{
         const posts = await postService.findAll()
-        console.log(posts);
             return response.status(200).json({
                 status: 200,
                 data: posts,
