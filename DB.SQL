@@ -10,7 +10,10 @@ create table post (
  idpost serial primary key,
  imgURL varchar(200),
  descricao varchar(300),
- comentario varchar(200),
+ localizacao varchar(200),
  idusers int,
  foreign key(idusers) references user(idusers)
+);
+create table comentario (
+  idcomentario serial primary key
 )

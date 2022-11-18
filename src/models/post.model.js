@@ -6,12 +6,12 @@ module.exports = (sequelize, Sequelize) => {
             autoIncrement: true
         },
         imgURL:{
-            type: Sequelize.STRING
+            type: Sequelize.STRING(1000)
         },
         descricao:{
             type: Sequelize.STRING
         },
-        comentario: {
+        localizacao: {
             type: Sequelize.STRING
         }
     },
