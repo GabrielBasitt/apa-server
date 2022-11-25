@@ -13,6 +13,9 @@ module.exports = (sequelize, Sequelize) => {
         },
         localizacao: {
             type: Sequelize.STRING
+        },
+        usuario:{
+            type: Sequelize.STRING
         }
     },
     {

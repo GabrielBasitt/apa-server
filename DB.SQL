@@ -12,6 +12,7 @@ create table post (
  descricao varchar(300),
  localizacao varchar(200),
  idusers int,
+ usuario int,
  foreign key(idusers) references user(idusers)
 );
 create table comentario (

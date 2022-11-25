@@ -35,8 +35,8 @@ exports.findById = async (request, response) => {
 }
 exports.create = async (request, response) => {
     try{
-        const {imgURL, descricao, localizacao } = request.body
-        const post = await postService.create(imgURL, descricao, localizacao)
+        const {imgURL, descricao, localizacao, usuario } = request.body
+        const post = await postService.create(imgURL, descricao, localizacao, usuario)
         response.status(201).send({
             message: "post criado com sucesso!",
             body:{
