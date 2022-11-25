@@ -35,8 +35,8 @@ exports.findById = async (request, response) => {
 }
 exports.create = async (request, response) => {
     try{
-        const { username, name, email, password, imgURL2 } = request.body
-        const user = await userService.create(username, name, email, password, imgURL2)
+        const { username, name, email, password, imgURL } = request.body
+        const user = await userService.create(username, name, email, password, imgURL)
         response.status(201).send({
             message: "Usuario cadastrado com sucesso!",
             body:{
@@ -53,8 +53,8 @@ exports.create = async (request, response) => {
 exports.update = async(request, response) =>{
     try{
         const id = parseInt(request.params.id)
-        const {username, name, email, password, imgURL2} = request.body
-        await userService.update(id, username, name, email, password, imgURL2)
+        const {username, name, email, password, imgURL} = request.body
+        await userService.update(id, username, name, email, password, imgURL)
         response.status(200).send({
             message: "usuario alterado com sucesso",
             body:{
