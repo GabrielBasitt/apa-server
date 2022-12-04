@@ -20,6 +20,9 @@ module.exports = (sequelize, Sequelize) => {
         photo:{
             type: Sequelize.STRING(1000)
         },
+        denuncia:{
+            type: Sequelize.BOOLEAN
+        },
     },
     {
         timestamps: false,
