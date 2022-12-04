@@ -27,7 +27,7 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             notNull:true
         },
-        imgURL:{
+        imgURL2:{
             type: Sequelize.STRING(1000)
         }
     },

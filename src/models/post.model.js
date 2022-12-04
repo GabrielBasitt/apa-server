@@ -16,7 +16,10 @@ module.exports = (sequelize, Sequelize) => {
         },
         usuario:{
             type: Sequelize.STRING
-        }
+        },
+        photo:{
+            type: Sequelize.STRING(1000)
+        },
     },
     {
         timestamps: false,
