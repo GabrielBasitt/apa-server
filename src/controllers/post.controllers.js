@@ -27,7 +27,7 @@ exports.findById = async (request, response) => {
             message: 'Post selecionado com sucesso'
         })
     } catch (e){
-        response.sed(400).json({
+        response.send(400).json({
             status:400,
             message: e
         })
@@ -35,8 +35,8 @@ exports.findById = async (request, response) => {
 }
 exports.create = async (request, response) => {
     try{
-        const {imgURL, descricao, localizacao, usuario } = request.body
-        const post = await postService.create(imgURL, descricao, localizacao, usuario)
+        const {imgURL, descricao, localizacao, usuario, photo, denuncia } = request.body
+        const post = await postService.create(imgURL, descricao, localizacao, usuario, photo, denuncia)
         response.status(201).send({
             message: "post criado com sucesso!",
             body:{
@@ -64,5 +64,39 @@ exports.delete = async(request, response) => {
                 status: 400,
                 message: e.message
             })
+    }
+}
+exports.update = async(request, response) =>{
+    try{
+        const id = parseInt(request.params.id)
+        const {denuncia} = request.body
+        await postService.update(id, denuncia)
+        response.status(200).send({
+            message: "post denunciado com sucesso",
+            body:{
+                status: 200,
+                denuncia: denuncia
+            }
+    })
+    } catch (e) {
+        return response.status(400).json({
+            status: 400,
+            message: e.message
+        })
+    }
+}
+exports.report = async (request, response) => {
+    try{
+        const post = await postService.report()
+        response.status(200).json({
+            status: 200,
+            data: post,
+            message: 'Post selecionado com sucesso'
+        })
+    } catch (e){
+        response.send(400).json({
+            status:400,
+            message: e
+        })
     }
 }
