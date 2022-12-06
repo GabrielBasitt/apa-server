@@ -14,16 +14,16 @@ exports.findAll = async () => {
  }
 }
 
-exports.findById = async(id) => {
-    try{
-        const post = await Post.findByPk(id, {
-            attributes:['id','imgURL', 'descricao', 'localizacao', 'photo', 'denuncia']
-        })
-        return post
-    } catch (e){
-        throw Error('Ocorreu um erro ao selecionar o Post. ERROR: ' + e.message)
-    }
-}
+// exports.findById = async(id) => {
+//     try{
+//         const post = await Post.findByPk(id, {
+//             attributes:['id','imgURL', 'descricao', 'localizacao', 'photo', 'denuncia']
+//         })
+//         return post
+//     } catch (e){
+//         throw Error('Ocorreu um erro ao selecionar o Post. ERROR: ' + e.message)
+//     }
+// }
 exports.create = async(imgURL, descricao, localizacao, usuario, photo) => {
     try{
         const post = await Post.create({

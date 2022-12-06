@@ -17,22 +17,22 @@ exports.findAll = async (request, response) =>{
         })
     }
 }
-exports.findById = async (request, response) => {
-    try{
-        const id = parseInt(request.params.id)
-        const post = await postService.findById(id)
-        response.status(200).json({
-            status: 200,
-            data: post,
-            message: 'Post selecionado com sucesso'
-        })
-    } catch (e){
-        response.send(400).json({
-            status:400,
-            message: e
-        })
-    }
-}
+// exports.findById = async (request, response) => {
+//     try{
+//         const id = parseInt(request.params.id)
+//         const post = await postService.findById(id)
+//         response.status(200).json({
+//             status: 200,
+//             data: post,
+//             message: 'Post selecionado com sucesso'
+//         })
+//     } catch (e){
+//         response.send(400).json({
+//             status:400,
+//             message: e
+//         })
+//     }
+// }
 exports.create = async (request, response) => {
     try{
         const {imgURL, descricao, localizacao, usuario, photo, denuncia } = request.body
